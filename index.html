@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <title>Ajfon eleven</title>
+</head>
+
+<body>
+
+    <div class="iphone-frame">
+        <div class="norch">
+            <div class="rounded"></div>
+        </div>
+        <div class="nav">
+            <div class="left"></div>
+            <div class="right">
+                <ion-icon name="cellular"></ion-icon>
+                <ion-icon name="wifi"></ion-icon>
+                <ion-icon name="battery-half"></ion-icon>
+
+            </div>
+        </div>
+
+        <div class="app-container">
+            <div class="bg-img">
+                <div class="bg-frame">
+                    <div class="extra"></div>
+                    <div class="extra_2"></div>
+                </div>
+            </div>
+            <div class="lock-screen active">
+                <div class="time" id="currentTime">
+                    <h1>12:00</h1>
+                    <span>Poniedziałek, Styczeń 08</span>
+                </div>               
+            <script>
+                function updateClock() {
+                    var currentTimeElement = document.getElementById('currentTime');
+                    var timeNow = new Date();
+
+                    var hours = timeNow.getHours();
+                    var minutes = timeNow.getMinutes();
+                    var day = timeNow.toLocaleDateString('pl-PL', { weekday: 'long' });
+                    var month = timeNow.toLocaleDateString('pl-PL', { month: 'long' });
+                    var dayOfMonth = timeNow.getDate();
+
+                    // Dodaje zero przed minutami, jeśli są jednocyfrowe
+                    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+                    var currentTimeString = hours + ':' + minutes;
+                    var dateString = day + ', ' + month + ' ' + dayOfMonth;
+
+                    currentTimeElement.innerHTML = '<h1>' + currentTimeString + '</h1><span>' + dateString + '</span>';
+                }
+
+                //aktualizacja zegara co sekundę
+                setInterval(updateClock, 1000);
+
+                //aktualizacja zegara od razu po załadowaniu strony
+                window.onload = updateClock;
+            </script>
+                <div class="scr-lock-nav">
+                    <div class="left">
+                        <button class="r-deg">
+                            <ion-icon name="flashlight"></ion-icon>
+                        </button>
+                    </div>
+                    <div class="right">
+                        <button>
+                            <ion-icon name="camera"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="open-button">
+                    kliknij aby otworzyć
+                </div>
+            </div>
+            <div class="application-menu">
+                <div class="applications">
+                    <div id="slide_1" class="slide-1">
+                        <div class="icon-sect">
+                            <div class="icon">
+                                <button class="facetime message">
+                                    <ion-icon name="videocam"></ion-icon>
+                                </button>
+                                <label>FaceTime</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="camera message">
+                                    <ion-icon name="camera"></ion-icon>
+                                </button>
+                                <label>Aparat</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="bi-envelope-fill mail">
+                                </button>
+                                <label>Mail</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="bi-book-fill ibook">
+                                </button>
+                                <label>Książki</label>
+                            </div>
+
+                        </div>
+
+                        <div class="icon-sect">
+
+                            <div class="icon">
+                                <button class="itunestore">
+                                    <ion-icon name="star"></ion-icon>
+                                </button>
+                                <label>iTune Store</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="bi-apple apple-tv">
+                                </button>
+                                <label>TV</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="appstore">
+                                    <ion-icon name="logo-apple-appstore"></ion-icon>
+                                </button>
+                                <label>App Store</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="phone-log">
+                                    <ion-icon name="call"></ion-icon>
+                                </button>
+                                <label>Telefon</label>
+                            </div>
+
+                        </div>
+
+                        <div class="icon-sect">
+
+                            <div class="icon">
+                                <button class="bi-house-fill home">
+
+                                </button>
+                                <label>Dom</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="itune music">
+                                    <ion-icon name="musical-notes"></ion-icon>
+                                </button>
+
+                                <label>iTune</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="message">
+                                    <ion-icon name="chatbubble"></ion-icon>
+                                </button>
+                                <label>Wiadomości</label>
+                            </div>
+
+                            <div class="icon">
+                                <button class="bi-heart-fill health">
+                                </button>
+                                <label>Zdrowie</label>
+                            </div>
+
+                        </div>
+
+                        <div class="icon-sect">
+
+                            <div class="icon">
+                                <a href="https://www.xbox.com/pl-PL" target="_blank">
+                                    <button class="xbox-app">
+                                    <ion-icon name="logo-xbox"></ion-icon>
+                                </button>
+                                </a>
+                                <label>Xbox</label> 
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://www.playstation.com/pl-pl/" target="_blank">
+                                      <button class="playstation-app">
+                                    <ion-icon name="logo-playstation"></ion-icon>
+                                </button> 
+                                </a>
+                                <label>Playstation</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://www.messenger.com" target="_blank">
+                                       <button class="messenger-app  ">
+                                    <span class="bi-messenger"></span>
+                                </button> 
+                                </a>
+                                <label>Messenger</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://open.spotify.com/?" target="_blank">
+                                        <button class="bi-spotify spotify-app">
+                                </button>
+                                </a>
+                                <label>Spotify</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="slide_2" class="slide-1  active-slide">
+                        <div class="icon-sect">
+
+                            <div class="icon">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <button class="facetime facebook-app bi-facebook">
+                                </button>
+                                </a>
+                                <label>Facebook</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://www.instagram.com" target="_blank">
+                                     <button class="instagram-app bi-instagram">
+                                </button>
+                                </a>
+                                <label>Instagram</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://twitter.com/i/flow/login" target="_blank">
+                                    <button class="twitter-app  bi-twitter  ">
+                                </button> 
+                                </a>
+                                <label>Twitter</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://pl.pinterest.com" target="_blank">
+                                    <button class="bi-pinterest pinterest-app">
+                                </button>
+                                </a>
+                                <label>Pinterest</label>
+                            </div>
+
+                        </div>
+                        <div class="icon-sect">
+
+                            <div class="icon">
+                                <a href="https://github.com" target="_blank">
+                                     <button class="facetime github-app bi-github">
+                                </button>
+                                </a>
+                                <label>Github</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://www.youtube.com" target="_blank">
+                                     <button class="youtube-app bi-youtube">
+                                </button>
+                                </a>
+                                <label>Youtube</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://web.whatsapp.com" target="_blank">
+                                    <button class="whatsapp-app  bi-whatsapp  ">
+                                </button>
+                                </a>
+                                <label>Whatsapp</label>
+                            </div>
+
+                            <div class="icon">
+                                <a href="https://www.snapchat.com" target="_blank">
+                                    <button class=" snapchat-app">
+                                    <ion-icon name="logo-snapchat"></ion-icon>
+                                </button>
+                                </a>
+                                <label>Snapchat</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="indicators">
+                    <span onclick="left()" class="active-screen span1"></span>
+                    <span onclick="right()" class=" span2"></span>
+                </div>
+                <div class="bottom-navigation">
+                    <div class="button-app phone-log">
+                        <ion-icon name="call"></ion-icon>
+                    </div>
+                    <div class="button-app music ">
+                        <ion-icon name="musical-notes"></ion-icon>
+                    </div>
+                    <div class="button-app message">
+                        <ion-icon name="chatbubble"></ion-icon>
+                    </div>
+                    <div class="button-app appstore">
+                        <ion-icon name="logo-apple-appstore"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button"></div>
+
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
